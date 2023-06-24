@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
 import Pagination from './Pagination';
-import { EstateInterface } from './interfaces/Estate';
+import { EstateInterface } from './interfaces/EstateInterface';
 
 const App: React.FC = () => {
     
