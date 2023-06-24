@@ -16,3 +16,11 @@ services:
       - '3000:3000'
     depends_on:
       - database
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+    depends_on:
+      - server

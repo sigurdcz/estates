@@ -1,0 +1,81 @@
+/* style.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+    background-color: #111111;
+}
+
+.container {
+    width: 800px;
+    background-color: #1e1e1e;
+    color: #dddddd;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #bbbbbb;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    color: #dddddd;
+    border: 1px solid #333333;
+}
+
+th {
+    background-color: #333333;
+}
+
+tr:nth-child(even) {
+    background-color: #444444;
+}
+
+.thumbnail {
+    border-radius: 10px;
+    height: 85px;
+    object-fit: cover;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #333333;
+    color: #dddddd;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.estate-link {
+    color: #ff7f50;
+    text-decoration: none;
+}
+
+.estate-link:hover {
+    text-decoration: underline;
+}

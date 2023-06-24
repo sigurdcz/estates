@@ -1,3 +1,6 @@
 ﻿database/data
 server/node_modules
 server/package-lock.json
+client/package-lock.json
+client/build
+client/node_modules
