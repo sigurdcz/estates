@@ -1,6 +1,8 @@
 export interface PaginationPropsInterface {
     page: number;
-    setPage: React.Dispatch<React.SetStateAction<number>>;
+    setPage: (page: number) => void;
     hasNextPage: boolean;
     hasPreviousPage: boolean;
+    estatesPerPage: number;
+    setEstatesPerPage: (estatesPerPage: number) => void;
 }

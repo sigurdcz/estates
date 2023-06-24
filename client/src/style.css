@@ -79,3 +79,14 @@ tr:nth-child(even) {
 .estate-link:hover {
     text-decoration: underline;
 }
+
+.select-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+.select-wrapper select {
+    padding: 5px;
+    font-size: 14px;
+}

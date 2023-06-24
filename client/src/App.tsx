@@ -4,15 +4,15 @@ import Pagination from './Pagination';
 import { EstateInterface } from './interfaces/EstateInterface';
 
 const App: React.FC = () => {
-    
     const [estates, setEstates] = useState<EstateInterface[]>([]);
     const [page, setPage] = useState(1);
     const [hasNextPage, setHasNextPage] = useState(true);
     const [hasPreviousPage, setHasPreviousPage] = useState(false);
     const url = 'http://localhost:3000/api/estate';
+    const [estatesPerPage, setEstatesPerPage] = useState(10);
 
     useEffect(() => {
-        fetch(`${url}?page=${page}&limit=10`)
+        fetch(`${url}?page=${page}&limit=${estatesPerPage}`)
             .then((response) => response.json())
             .then((data) => {
                 setEstates(data);
@@ -20,10 +20,10 @@ const App: React.FC = () => {
             .catch((error) => {
                 console.error('Error:', error);
             });
-    }, [page]);
-
+    }, [page, estatesPerPage]);
+    
     useEffect(() => {
-        fetch(`${url}?page=${page + 1}&limit=10`)
+        fetch(`${url}?page=${page + 1}&limit=${estatesPerPage}`)
             .then((response) => response.json())
             .then((data) => {
                 setHasNextPage(data.length > 0);
@@ -31,7 +31,7 @@ const App: React.FC = () => {
             .catch((error) => {
                 console.error('Error:', error);
             });
-    }, [page]);
+    }, [page, estatesPerPage]);
 
     useEffect(() => {
         setHasPreviousPage(page > 1);
@@ -47,6 +47,8 @@ const App: React.FC = () => {
                 setPage={setPage}
                 hasNextPage={hasNextPage}
                 hasPreviousPage={hasPreviousPage}
+                estatesPerPage={estatesPerPage}
+                setEstatesPerPage={setEstatesPerPage}
             />
             <div className="content">
                 <table>
@@ -89,6 +91,8 @@ const App: React.FC = () => {
                 setPage={setPage}
                 hasNextPage={hasNextPage}
                 hasPreviousPage={hasPreviousPage}
+                estatesPerPage={estatesPerPage}
+                setEstatesPerPage={setEstatesPerPage}
             />
         </div>
     );
