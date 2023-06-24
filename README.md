@@ -11,11 +11,7 @@ No main middleware or generic exception catching is used.
 
 Filling the database takes place every time the server is started because I didn't know how to do it properly.
 ## Technology
-<<<<<<< HEAD
 Node.JS │ React │ Typescript │ Docker
-=======
-Node.JS React Typescript
->>>>>>> 803e8969640d9c036063167ccda1cea8a6cfb58c
 
 
 ## API 
